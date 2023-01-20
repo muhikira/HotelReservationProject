@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.time.LocalDate;
 
 @Entity(name="Reservation")
@@ -21,6 +22,7 @@ public class Reservation {
     private String lastName;
     private LocalDate checkinDate;
     private LocalDate checkoutDate;
+
     private String email;
     private String room;
 

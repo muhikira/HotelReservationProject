@@ -12,23 +12,28 @@ import java.util.Optional;
 @Service
 public class HotelRoomServiceImpl implements HotelRoomService {
     private HotelRoomRepository hotelRoomRepository;
+
     @Autowired
-    public void SetHotelRoomRepository (HotelRoomRepository hotelRoomRepository){
+    public void SetHotelRoomRepository(HotelRoomRepository hotelRoomRepository) {
         this.hotelRoomRepository = hotelRoomRepository;
     }
+
     @Override
     public List<HotelRoom> getAll() {
         return hotelRoomRepository.findAll();
     }
+
     @Override
     public HotelRoom findById(int hotelRoomId) {
         return null;
     }
-      @Override
+
+    @Override
     public HotelRoom save(HotelRoom hotelRoom) {
         return hotelRoomRepository.save(hotelRoom);
 
     }
+
     @Override
     public void deleteById(int id) {
 

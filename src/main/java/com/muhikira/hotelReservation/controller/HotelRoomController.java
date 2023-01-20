@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.ParseException;
+import java.time.Instant;
+import java.time.LocalDate;
+
+
 @RestController
 @RequestMapping("/booking")
 public class HotelRoomController {
@@ -28,7 +33,8 @@ public class HotelRoomController {
     }
 
     @PostMapping("/reservation")
-    public Reservation createBooking(@RequestBody ReservationRequest reservationRequest) {
+    public Reservation createBooking(@RequestBody ReservationRequest reservationRequest) throws IllegalAccessException, ParseException {
+
         return reservationService.save(reservationRequest);
     }
 

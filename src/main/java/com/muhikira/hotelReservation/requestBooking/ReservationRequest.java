@@ -18,4 +18,5 @@ public class ReservationRequest {
         this.checkoutDate = checkoutDate;
         this.email = email;
     }
+
 }
